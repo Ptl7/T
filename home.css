@@ -48,3 +48,10 @@ body {
             bottom: 0;
             width: 100%;
         }
+
+blog-post {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
