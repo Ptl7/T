@@ -169,3 +169,14 @@ footer {
 footer p {
     font-size: 1rem;
 }
+
+/* Center align images within the article */
+article img {
+    display: block;           /* Ensures images are treated as block elements */
+    margin-left: auto;        /* Centers image horizontally */
+    margin-right: auto;       /* Centers image horizontally */
+    border: 2px solid #000;   /* Adds a 2px solid black border */
+    width: 200px;             /* Sets the width to 200px */
+    height: 200px;            /* Sets the height to 200px */
+    object-fit: cover;        /* Ensures images cover the 200x200px area without distortion */
+}
