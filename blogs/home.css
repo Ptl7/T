@@ -178,5 +178,5 @@ article img {
     border: 2px solid #000;   /* Adds a 2px solid black border */
     width: 200px;             /* Sets the width to 200px */
     height: 200px;            /* Sets the height to 200px */
-    object-fit: cover;        /* Ensures images cover the 200x200px area without distortion */
+    object-fit: fill;        /* Ensures images cover the 200x200px area without distortion */
 }
