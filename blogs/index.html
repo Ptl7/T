@@ -45,10 +45,8 @@
     <p>&copy; 2024 Patel Blogs. All rights reserved.</p>
 </footer>
 <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents form from submitting normally
-
-            var query = document.getElementById('searchInput').value.toLowerCase();
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var query = this.value.toLowerCase();
             var posts = document.querySelectorAll('.blog-post');
 
             posts.forEach(function(post) {
