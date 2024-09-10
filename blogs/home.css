@@ -80,7 +80,7 @@ nav a:hover {
     margin-left: 20px;
 }
 
-/* Right content section */
+/* Right content section (sidebar) */
 .right {
     width: 30%;
     background-color: #fff;
@@ -112,6 +112,51 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hide sidebar on small screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        display: none;
+    }
+}
+
+/* Sidebar Toggle Button for Mobile */
+.sidebar-toggle {
+    display: none;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .right {
+        display: none;
+        width: 100%;
+    }
+
+    .right.open {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
 /* Footer section */
 footer {
     text-align: center;
@@ -123,20 +168,4 @@ footer {
 
 footer p {
     font-size: 1rem;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left, .right {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
 }
