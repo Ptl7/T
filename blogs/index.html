@@ -11,6 +11,10 @@
 
 <header>
     <h1>Blogs</h1>
+    <form align="left" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search blog posts..." required>
+        <button type="submit">Search</button>
+    </form>
 </header>
 
 <nav align="centre">
@@ -40,6 +44,22 @@
 <footer>
     <p>&copy; 2024 Patel Blogs. All rights reserved.</p>
 </footer>
+<script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents form from submitting normally
 
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            var posts = document.querySelectorAll('.blog-post');
+
+            posts.forEach(function(post) {
+                var title = post.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(query)) {
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.add('hidden');
+                }
+            });
+        });
+</script>
 </body>
 </html>
